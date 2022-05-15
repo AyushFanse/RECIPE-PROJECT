@@ -1,0 +1,21 @@
+:root{
+    --cl:#1b1b33;
+    --login:#fff;
+    --theam:#ffa600;
+}
+
+/*-------------------------------------------* Pagination Page *-----------------------------------------------*/
+.swiper-pagination{
+    top: 305px;
+    height: 9px;
+}
+.swiper-pagination-bullet-active{
+    background: #fff;
+}
+@media (min-width: 768px) {
+    .swiper-pagination{
+        top: 205px;
+        height: 9px;
+    }
+}
+

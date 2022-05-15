@@ -1,0 +1,259 @@
+:root{
+    --cl:#1b1b33;
+    --login:#fff;
+    --theam:#ffa600;
+    --theamColor1:rgb(116, 62, 0);
+}
+
+/*-------------------------------------------* Home Components *-----------------------------------------------*/
+#background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    #searchIconBar{
+    display:none;
+    }
+    #searchIconOut{
+    display:none;
+    }
+    #searchField{
+    display:none;
+    }
+}
+@media (min-width: 768px) {
+#searchIconBar{
+    display:flex;
+    justify-content: flex-start;
+    width:25%;
+    background-color:rgba(128, 128, 128, 0.13);
+    padding:5px 10px;
+    border-radius:10px; 
+}
+#searchIconOut{
+    position:relative;
+    margin-right: 2px;
+}
+#searchField{
+    border: none;
+    background-color:transparent;
+    outline:none; 
+    left:0;
+    overflow:hidden;
+}
+}
+@media (min-width: 768px) {
+#SearchBarForMd{
+    width:100%;
+    display:none;
+}}
+@media (max-width: 768px) {
+#searchIconBarForMd{
+    display:flex;
+    justify-content: flex-start;
+    width:100%;
+    background-color:rgba(128, 128, 128, 0.13);
+    padding:5px 10px;
+}
+#searchIconOutForMd{
+    position:relative;
+    margin-right: 2px;
+}
+#searchFieldForMd{
+    border: none;
+    width:100%;
+    background-color:transparent;
+    outline:none; 
+    padding-left:10px;
+    left:0;
+    overflow:hidden;
+}}
+#bookmarks{
+    cursor: pointer;
+}
+#homeBack{
+    backdrop-filter: blur(1px);
+    margin-top: 50px;
+    scroll-behavior:smooth ;
+}
+#postContainer{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    #postContainer{
+        justify-content: center;
+}   }
+#homeCard{
+    min-width: 200px;
+    min-height: 274px;
+    transition:0.2s ease-in-out;
+    max-width: 313px;
+    max-height: 278px;
+    box-shadow: 0.4px 1px 10px #1b1b3341;
+    z-index: 2;
+}
+
+#User{
+    content: " ";
+    position: absolute;
+    color: rgb(255 255 255);
+    top: 30px;
+    z-index: 15;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0px 2px 0px #fdfdfd8c;
+    width: auto;
+    backdrop-filter: blur(4px);
+    height: 30px;
+    background-color: rgb(27 27 51 / 60%);
+}
+@media (min-width: 768px) {
+    #User{
+        opacity: 0;
+}   }
+#homeCard:hover #User{
+    opacity: 1;
+    transition:0.8s;
+}
+#User #userName{
+    position:relative;    
+    cursor: pointer;
+    margin: 14px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+@media (max-width: 768px) {
+    #homeCard{
+        align-items: center;
+        margin:auto;
+        max-width:100%;
+        max-height: 100%;
+        z-index: 2;
+}   }
+@media (min-width: 768px) {
+#homeCard:hover{
+    max-height: 100%;
+    transition:0.5s;
+    transform: translateY(-50px);
+}   }
+@media (max-width: 768px) {
+    #homeCard:hover{
+        max-height: 100%;
+    }
+    .postInCard{
+        width:100%;
+    }
+    #imageBorder{
+        width:100%;
+}   } 
+
+#imageBorder{
+    padding: 10px;
+}
+#imageBorder #homeCard #img{
+    width: 313px;
+    height: 223px;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    #imageBorder #homeCard #img{
+        width: 100%;
+        height: 330px;
+}   }
+#tabsOut ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.8rem 1rem 1.8rem;
+    margin-bottom: 0rem;
+}
+#tabsOut ul li{
+    list-style: none;
+    height:20px;
+}
+#savedItems{
+    margin-top:8px;
+    height:20px;
+    position:absolute;
+    background:#a3a3a3;
+    margin-left: -10px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 4px rgb(112, 109, 109);
+    opacity: 0;
+}
+.like{
+    cursor: pointer;
+}
+#error{
+    color:rgb(184, 8, 8);    
+    cursor: pointer;
+}
+#chat{
+    color:rgb(51, 134, 160);    
+    cursor: pointer;
+}
+#mark{
+    color:var(--cl);    
+    cursor: pointer;
+}
+.Bookmark{
+    cursor: pointer;
+}
+#imageBorder #homeCard #titleOut{
+    width: 100%;
+    padding:2px;
+}
+#title{    
+    color:var(--cl);
+}
+#postTime{
+    display:flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+    font-size:10px;
+    cursor: default;
+    text-decoration-line: underline;
+    color:var(--theam);
+}
+#homeCard h5{
+    text-align:center;
+}
+#imageBorder #homeCard #gotoDataOut{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    padding:4.5px;
+}
+#gotoData {
+    width: 200px;
+    margin: auto;
+    padding:2px;
+    font-size:18px;
+    color:#3F5EFB;
+    cursor: pointer;
+}
+@media (min-width: 790px) {
+#gotoData i{
+    transform: translateX(50px);
+    transition:0.5s;
+    opacity:0;
+}
+#gotoData:hover i{
+    transform: translateX(0px);
+    transition:0.5s;
+    opacity:1;
+}
+}
+@media (max-width: 790px) {
+    #gotoData {
+        width: 200px;
+        margin: auto;
+        padding:2px;
+        font-size:18px;
+        color:#3F5EFB;
+}   }

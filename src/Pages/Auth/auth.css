@@ -1,0 +1,348 @@
+:root{
+    --cl:#1b1b33;
+    --login:#fff;
+    --theam:#ffa600;
+}
+
+/*-------------------------------------------------* Log-In Page *------------------------------------------------*/
+
+#container::after{
+    content: "";
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width:346px;
+    height:479px;
+    background: var(--cl);;
+    top: 13px;
+    z-index: 1;
+    border-radius: 20px;
+    border: 4px solid var(--login);
+    box-shadow: 0px 15px 15px rgba(10,10,10, 0.2),
+                inset 0px -15px 15px rgb(8, 7, 14, 0.2),
+                0px 15px 15px rgba(0, 0, 0, 0.4),
+                inset 0px 15px 15px rgba(8, 7, 14, 0.4);
+}
+#container::before{
+    content: "";
+    position:absolute;
+    width:420px;
+    height:115%;
+    background:var(--theam);
+    border-radius: 20px;
+    z-index: 1;
+    border: 10px solid var(--login);
+    box-shadow: 0px 15px 15px rgba(10,10,10, 0.2),
+                inset 0px -15px 15px rgb(8, 7, 14, 0.2),
+                0px 15px 15px rgba(0, 0, 0, 0.4),
+}
+#container{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background:rgba(0,0,0,0.5);
+    z-index: 0;
+}
+#container h1{
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 2px 2px 7px rgba(0,0,0,0.5);
+    z-index: 3;
+    width:25%;
+    height:90%;
+}
+#container h1:hover{
+    opacity:0
+}
+#card::before{
+    content: "";
+    position:absolute;
+    width:65%;
+    height:27%;
+    display:grid;
+    justify-content: center;
+    align-items:center;
+    background: var(--cl);
+}
+#card {
+    position:relative;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width:320px;
+    height:450px;
+    margin: 30px;
+    background: rgba(13, 13, 27, 0.068);
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    backdrop-filter: blur(15px);
+    border-top: 0.5px solid rgba(255,255,255,0.5);
+    border-left: 0.5px solid rgba(255,255,255,0.5);
+    border-radius: 15px;
+    transform: translateY(2em);
+    transition:40s all ease;
+    z-index: 5;
+    opacity: 0;
+}
+#card:hover{
+    opacity: 1;
+    z-index: 5;
+    transform: translateY(0em);
+    transition:0.3s;
+}
+@media (max-width: 768px){    
+    #card{
+        opacity: 1;
+        z-index: 5;
+        transform: translateY(0em);
+        transition:0.3s;
+    }
+}
+#Container #card #content {
+    padding: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+#card #content h2{
+    font-size: 2.6em;
+    color: var(--login);
+    z-index: 6;
+    transition: 3s;
+    text-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+}
+#card #content h2:hover{
+    text-shadow: 0px 0px 17px var(--theam);
+    transition:0.2s;
+}
+#switch{
+    color: var(--theam);
+}
+#button{
+    margin-top: 30px;
+    background:rgba(255,255,255,0.1);
+    box-shadow: 0px 0px 15px var(--theam),inset 0px 0px 10px rgba(0, 0, 0, 0.349);
+    border-radius: 20px;
+}
+#icons{
+    color: var(--login);
+    filter: drop-shadow(0px 0px 5px #0a0a13)
+}
+#iconsVisibilityOff{
+    color: #ff88008a;;
+}
+#standard-adornment-password,#input-with-icon-textfield{
+    color: var(--login);
+}
+#loginIcon{    
+    font-size: 1em;
+    margin-top: -12px;
+    text-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+}
+
+/*-------------------------------------------------* Sign-In Page *------------------------------------------------*/
+
+#containerSignIn::after{
+    content: "";
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width:410px;
+    height: 107%;
+    background:var(--cl);
+    z-index: 1;
+    border-radius: 20px;
+    border: 4px solid var(--login);
+    box-shadow: 0px 15px 15px rgba(10,10,10, 0.2),
+                inset 0px -15px 15px rgb(8, 7, 14, 0.2),
+                0px 15px 15px rgba(0, 0, 0, 0.4),
+                inset 0px 15px 15px rgba(8, 7, 14, 0.4);
+}
+#containerSignIn::before{
+    content: "";
+    position:absolute;
+    width:465px;
+    height:117%;
+    background:var(--theam);
+    border-radius: 20px;
+    z-index: 1;
+    border: 10px solid var(--login);
+    box-shadow: 0px 15px 15px rgba(10,10,10, 0.2),
+                inset 0px -15px 15px rgb(8, 7, 14, 0.2),
+                0px 15px 15px rgba(0, 0, 0, 0.4),
+}
+#containerSignIn{
+    height:100%;
+    width:100%;
+    top:90px;
+    background:rgba(0,0,0,0.5);
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 0;
+}
+#DisplayProPic{
+    background:black;
+}
+#signInCard {
+    position:relative;
+    width:377px;
+    height:auto;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(51, 51, 51, 0.068);
+    display: flex;
+    z-index: 5;
+    justify-content:center;
+    align-items:center;
+    border-top: 0.5px solid rgba(255,255,255,0.5);
+    border-left: 0.5px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(15px);
+    transition:0.5s;
+}
+#signInCard #signInContent {
+    text-align: center;
+    transition: 0.5s;
+}
+#subForSignIn{
+    position:relative;
+    color:rgb(255, 78, 78);
+    cursor:not-allowed ;
+}
+#subForSignInProfilePic{
+    position:relative;
+    color:red;
+    cursor:none;
+    top:-30px;
+}
+#TandC{
+    font-size:12px;
+    text-align: center;
+    margin-top:180px;
+}
+input,#standard1,#standard2,#standard3,#standard4,#standard5,#standard6,#standard7{
+    color: var(--login);
+}
+#signInHead{
+    margin-top:9px;
+}
+#navBar{
+    background:var(--cl);
+    height:60px;
+    text-transform: uppercase;
+}
+#switchLogin{
+    color:var(--login);
+}
+#ProfilePhoto{
+    height:250px;
+}
+#profilePicCard{
+    display:flex;
+    justify-content: center;
+    height:100%;
+    padding:10px;
+    background:none;
+    box-shadow:none;
+}
+#profileOut{
+    display:flex;
+    justify-content: center;
+    background:#fff;
+    border:4px solid var(--theam);
+    border-radius:50%;
+    width: 190px;
+    height: 190px;
+}
+#PofilePic{
+    display:flex;
+    justify-content: center;
+    opacity: 0;
+    cursor: pointer;
+    background: red;
+    border-radius:50%;
+    border-bottom-right-radius:20%;
+    z-index:30;
+    width: 100%;
+    height:100%;
+}
+#PofilePic__img{
+    width:100%; 
+    height:100%; 
+    z-index: 10px;
+    margin-left: -182px;
+    object-fit:cover;
+    border-radius:50%;
+}
+#ICON{
+    position:absolute;
+    display:flex;
+    background:var(--login);
+    border:3px solid var(--theam);
+    width:45px;
+    height:45px;
+    z-index:2;
+    border-radius:50%;
+    top:243px;
+    right:100px;
+}
+#uploadProfilePic{
+    position:relative;
+    margin:auto;
+    width:30px;
+    z-index:2;
+    height:30px;
+}
+#uploadedProfilePic{
+    position:relative;
+    margin: -0.6px 0px 0px -1.25px;
+    color:green;
+    width:41px;
+    height:41px;
+}
+#profilePicNameOut{
+    position:absolute;
+    font-size:40px;
+    width:180px;
+    top:115px;
+    left:98px;
+    overflow:hidden;
+}
+#profilePicName{
+    font-size:18px;
+    overflow:hidden;
+    text-align:center;
+    margin-top: 80px;
+}
+#CircularProgress{
+    color: var(--theam);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -12px;
+    margin-left: -12px;
+}
+#signup{
+    align-items: center; 
+    cursor: default; 
+    display:flex; 
+    justify-content: space-evenly; 
+    color: var(--login);
+    padding: 25px 100px;
+    font-size: 2em;
+    z-index: 6;
+    transition: 3s;
+    text-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+}
+#signupIcon{
+    font-size: 1.1em;
+    text-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+}

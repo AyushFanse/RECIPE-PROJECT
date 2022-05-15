@@ -1,0 +1,1031 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Days+One&family=Inter:wght@700&family=Play:wght@400;700&family=Poppins:wght@600&display=swap');
+*{
+    font-family: 'Montserrat';
+}
+::-webkit-scrollbar{
+    width:5px;
+}
+#scrollPath{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width:5px;
+    height:100%;
+    background:#0a0a13;
+}
+#progressBar{
+    position: fixed;
+    top: 0;
+    right: 0;    
+    width:5px;
+    height:100%;
+    background: linear-gradient(to top,#008aff, #00ffe7);
+    animation: scroolbar 5s linear infinite;
+}
+@keyframes scroolbar {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(360deg);
+}   }
+#progressBar::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background: linear-gradient(to top,#008aff, #00ffe7);
+    filter: blur(10px);
+}
+#progressBar::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background: linear-gradient(to top,#008aff, #00ffe7);
+    filter: blur(30px);
+}
+:root{
+    --cl:#1b1b33;
+    --login:#fff;
+    --theam:#ffa600;
+}
+.css-19cr7y7 {
+    color: var(--theam);
+}
+
+/*-------------------------------------------------* Menu Bar *------------------------------------------------*/
+   
+.manuOut{
+    margin-top:46px;
+}
+#menuItemsOut{
+    display:flex;
+    justify-content:flex-start;
+}
+#menuItems{
+    font-size: 18px;
+    display:flex;
+    font-weight: 600;
+    font-family:'Montserrat';
+    justify-content:space-around;
+    opacity:0.8;
+}
+#menuItemsOut:hover #menuItems{
+    opacity:1;
+    color:var(--cl);
+}
+#menuItemsUser{
+    font-size: 21px;
+    font-weight:600;
+    cursor: default;
+    margin:auto 10px;
+    display:flex;
+    justify-content:space-around;
+}
+#menuItemsIcon{
+    width: 20px;    
+    opacity:0.5;
+}
+#menuItemsOut:hover #menuItemsIcon{
+    opacity:1;
+    color:var(--cl);
+}
+
+/*-------------------------------------------* Home Components *-----------------------------------------------*/
+:root{
+    --theamColor1:rgb(116, 62, 0);
+}
+#appbar{
+    position:fixed;
+    background: var(--cl);    
+    cursor: default;
+    text-transform: uppercase;
+    box-shadow: 4px 0px 10px var(--cl);
+}
+#background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    #searchIconBar{
+    display:none;
+    }
+    #searchIconOut{
+    display:none;
+    }
+    #searchField{
+    display:none;
+    }
+}
+@media (min-width: 768px) {
+#searchIconBar{
+    display:flex;
+    justify-content: flex-start;
+    width:25%;
+    background-color:rgba(128, 128, 128, 0.13);
+    padding:5px 10px;
+    border-radius:10px; 
+}
+#searchIconOut{
+    position:relative;
+    margin-right: 2px;
+}
+#searchField{
+    border: none;
+    background-color:transparent;
+    outline:none; 
+    left:0;
+    overflow:hidden;
+}
+}
+@media (min-width: 768px) {
+#SearchBarForMd{
+    width:100%;
+    display:none;
+}}
+@media (max-width: 768px) {
+#searchIconBarForMd{
+    display:flex;
+    justify-content: flex-start;
+    width:100%;
+    background-color:rgba(128, 128, 128, 0.13);
+    padding:5px 10px;
+}
+#searchIconOutForMd{
+    position:relative;
+    margin-right: 2px;
+}
+#searchFieldForMd{
+    border: none;
+    width:100%;
+    background-color:transparent;
+    outline:none; 
+    padding-left:10px;
+    left:0;
+    overflow:hidden;
+}}
+#bookmarks{
+    cursor: pointer;
+}
+#homeBack{
+    backdrop-filter: blur(1px);
+    margin-top: 50px;
+    scroll-behavior:smooth ;
+}
+#postContainer{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    #postContainer{
+        justify-content: center;
+}   }
+#homeCard{
+    min-width: 200px;
+    min-height: 274px;
+    transition:0.2s ease-in-out;
+    max-width: 313px;
+    max-height: 278px;
+    box-shadow: 0.4px 1px 10px #1b1b3341;
+    z-index: 2;
+}
+
+#User{
+    content: " ";
+    position: absolute;
+    color: rgb(255 255 255);
+    top: 30px;
+    z-index: 15;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0px 2px 0px #fdfdfd8c;
+    width: auto;
+    backdrop-filter: blur(4px);
+    height: 30px;
+    background-color: rgb(27 27 51 / 60%);
+}
+@media (min-width: 768px) {
+    #User{
+        opacity: 0;
+}   }
+#homeCard:hover #User{
+    opacity: 1;
+    transition:0.8s;
+}
+#User #userName{
+    position:relative;    
+    cursor: pointer;
+    margin: 14px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+@media (max-width: 768px) {
+    #homeCard{
+        align-items: center;
+        margin:auto;
+        max-width:100%;
+        max-height: 100%;
+        z-index: 2;
+}   }
+@media (min-width: 768px) {
+#homeCard:hover{
+    max-height: 100%;
+    transition:0.5s;
+    transform: translateY(-50px);
+}   }
+@media (max-width: 768px) {
+    #homeCard:hover{
+        max-height: 100%;
+    }
+    .postInCard{
+        width:100%;
+    }
+    #imageBorder{
+        width:100%;
+}   } 
+
+#imageBorder{
+    padding: 10px;
+}
+#imageBorder #homeCard #img{
+    width: 313px;
+    height: 223px;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    #imageBorder #homeCard #img{
+        width: 100%;
+        height: 330px;
+}   }
+#tabsOut ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.8rem 1rem 1.8rem;
+    margin-bottom: 0rem;
+}
+#tabsOut ul li{
+    list-style: none;
+    height:20px;
+}
+#savedItems{
+    margin-top:8px;
+    height:20px;
+    position:absolute;
+    background:#a3a3a3;
+    margin-left: -10px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 4px rgb(112, 109, 109);
+    opacity: 0;
+}
+.like{
+    cursor: pointer;
+}
+#error{
+    color:rgb(184, 8, 8);    
+    cursor: pointer;
+}
+#chat{
+    color:rgb(51, 134, 160);    
+    cursor: pointer;
+}
+#mark{
+    color:var(--cl);    
+    cursor: pointer;
+}
+.Bookmark{
+    cursor: pointer;
+}
+#imageBorder #homeCard #titleOut{
+    width: 100%;
+    padding:2px;
+}
+#title{    
+    color:var(--cl);
+}
+#postTime{
+    display:flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+    font-size:10px;
+    cursor: default;
+    text-decoration-line: underline;
+    color:var(--theam);
+}
+#homeCard h5{
+    text-align:center;
+}
+#imageBorder #homeCard #gotoDataOut{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    padding:4.5px;
+}
+#gotoData {
+    width: 200px;
+    margin: auto;
+    padding:2px;
+    font-size:18px;
+    color:#3F5EFB;
+    cursor: pointer;
+}
+@media (min-width: 790px) {
+#gotoData i{
+    transform: translateX(50px);
+    transition:0.5s;
+    opacity:0;
+}
+#gotoData:hover i{
+    transform: translateX(0px);
+    transition:0.5s;
+    opacity:1;
+}
+}
+@media (max-width: 790px) {
+    #gotoData {
+        width: 200px;
+        margin: auto;
+        padding:2px;
+        font-size:18px;
+        color:#3F5EFB;
+}   }
+
+/*-------------------------------------------* Profile Page *-----------------------------------------------*/
+
+@media (min-width: 988px) {
+#data{
+    display: flex;
+    justify-content: center;
+}}
+#profileBack{
+    position:relative;
+    height:100%;
+    width:100%;
+    backdrop-filter: blur(1px);
+    margin-top: 50px;
+    scroll-behavior:smooth ;
+}
+@media (min-width: 988px) {
+#profileContainer{
+    height:400px;
+    width:30%;
+    display:grid;
+    place-items:center;
+    vertical-align:middle;
+    padding:44px 0px 73px 0px;
+}   }
+@media (max-width: 988px) {
+    #profileContainer{
+        position:relative;
+        justify-content:center;
+        padding:40px 80px;
+        height:100%;
+        width:100%;
+    }
+    #data{
+        width:100%;
+    }
+}
+.profilePicOut{
+    height:270px;
+    width:270px;
+    padding:5px;
+    border-radius: 50%;
+    box-shadow: 0 0 6px;
+}
+.profilePicOut.Active{
+    animation: changeBg 5s linear infinite;
+}
+@keyframes changeBg {
+    0%{
+        background: rgb(250, 0, 33);
+        box-shadow: 0px 0px 10px rgb(250, 0, 33);
+    }
+    20%{
+        background: rgb(250, 0, 33);
+        box-shadow: 0px 0px 10px rgb(250, 0, 33);
+    }
+    40%{
+        background: rgb(250, 0, 117);
+        box-shadow: 0px 0px 10px rgb(250, 0, 117);
+    }
+    60%{
+        background: rgb(192, 0, 250);
+        box-shadow: 0px 0px 10px rgb(192, 0, 250);
+    }
+    80%{
+        background: rgb(250, 0, 117);
+        box-shadow: 0px 0px 10px rgb(250, 0, 117);
+    }
+    100%{
+        background: rgb(250, 0, 42);
+        box-shadow: 0px 0px 10px rgb(250, 0, 42);
+    }
+}
+@media (max-width: 988px) {
+    .profilePicOut{
+        height:200px;
+        width:200px;
+        display: flex;
+        margin:auto;
+    }
+}
+#profilePic{
+    height:100%;
+    width:100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#profileUser{
+    text-align: center;
+    padding:18px 70px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+@media (max-width: 450px) {
+    #profileUser{
+        padding:18px 0px;
+}   }
+#profileUser p{
+    border-radius:25px !important;
+    padding:6px;    
+    cursor: default;
+    background: linear-gradient(0deg, #FC466B 0%, #3F5EFB 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: scroolbar 25s linear infinite;
+}
+
+@media (min-width: 988px) {
+#AboutData{
+    height:100%;
+    width:70%;
+}}
+@media (max-width: 988px) {
+    #AboutData{
+        height:100%;
+        width:100%;
+        margin-left: -15px;
+        padding:0;
+}   }
+
+#AboutData #profile{
+    display: flex;
+    justify-content:space-around;
+    width:100%;
+    height:100%;
+    padding-left: 0rem;
+}
+@media (max-width: 988px) {
+    #AboutData #profile{
+        padding-left: 2rem;
+        margin-top: -100px;
+}   }
+#AboutData ul li{
+    list-style: none;
+    margin: auto;
+}
+#AboutData ul li h2{
+    position: relative;
+    text-align: center;
+    cursor: default;
+    margin-top:60px;
+    font-family: 'Play', sans-serif;
+}
+@media (min-width: 988px) {
+#AboutData ul li h4 {
+    position: relative;
+    text-align: center;
+    padding:18px 80px;
+    cursor: default;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Inter', sans-serif;
+}}
+@media (max-width: 988px) {
+    #AboutData ul li h4 {
+        position: relative;
+        text-align: center;
+        cursor: default;
+        padding:0;
+        font-size: 20px;
+        font-weight: bolder;
+        font-family: 'Inter', sans-serif;
+    }
+}
+#profilePostContainer{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-top: 60px;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.287);
+}
+#profileDisplay{
+    margin-top: 0px;
+}
+@media (max-width: 988px) {
+    #profilePostContainer{
+        justify-content: center;
+}   }
+.profileHomeCard{
+    margin-top: 0;
+}
+#profileAboutOut{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding:20px;
+    margin-top: -30px;
+}
+#profileAboutOut h3{
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: default;
+    font-family: 'Inter', sans-serif;
+}
+#profileAboutOut h6{
+    cursor: default;
+    font-family: 'Inter', sans-serif;
+}
+@media (max-width: 988px) {
+    #profileAboutOut{
+        margin-left: 40px;   
+}   }
+#bookmarkPostContainer{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 14px;
+    padding-top: 60px;
+    width: 100%;
+    height: 100%;
+}
+#deletePost{
+    width:100%;
+    display: flex;
+    justify-content:center;
+}
+/*-------------------------------------------* User Profile *-----------------------------------------------*/
+
+#AboutData #userProfile{
+    display: flex;
+    justify-content:space-evenly;
+    width:90%;
+    height:100%;
+    padding-left: 0rem;
+}
+@media (max-width: 988px) {
+    #AboutData #userProfile{
+        padding-left: 2rem;
+        margin-top: -100px;
+}   }
+/*-------------------------------------------* View Recipe *-----------------------------------------------*/
+#DialogBarForRecipe{
+    background:var(--cl);
+    height:64px;
+    position: fixed;
+}
+#TitleRecipePage{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    width:100%;
+    letter-spacing: 8px;
+}
+#TitleDilog{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    width:auto;
+    letter-spacing: 4px;
+}
+#RecipePageImgPart{
+    position: relative;
+    height:auto;
+    border-radius: 15px;
+    width:95%;
+    margin: 80px auto 10px auto;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.5);
+}
+#RecipePageImgContainer{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width:100%;
+    height:400px;    
+}
+#imgOutRecipePageHead{
+    position:relative;
+    width: 100%;
+    height:100%;
+}
+#imgOutRecipePageHead #img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+#imgOutRecipePageHead h1{
+    position:absolute;
+    z-index: 10;
+    color:rgb(255, 255, 255);
+    text-shadow: 0px 0px 6px rgb(3, 3, 3);
+    margin: auto;
+    padding: 30px;
+    padding-left: 50px;
+    bottom:0;
+    left:0;
+}
+@media (max-width: 768px){
+    #imgOutRecipePageHead h1{        
+        padding-left: 20px;
+        font-size:40px;
+    }
+    #imgOutRecipePageHead #img{
+        min-height: 400px;    
+    }
+}
+#RecipePageTextContainer{
+    position: relative;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width:100%;
+    min-height:300px;
+    height:auto;    
+    padding: 20px;
+}
+#RecipePageTextContainer #RecipeText {
+    width:100%;
+    height:auto;  
+    font-size: 21px;
+    font-family: 'Play', sans-serif;
+    text-align: justify;
+    padding: 30px 30px;
+    white-space: pre-line;
+}
+@media (max-width: 768px){
+    #RecipePageTextContainer #RecipeText {        
+        padding: 0px 20px;
+        font-size:17px;
+        text-align: justify;
+}   }
+
+/*-------------------------------------------* Upload Media *-----------------------------------------------*/
+.UpladTemplet{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    width:100%;
+    height:100%;
+    margin:0px 0px 0px 0px;
+}
+#uploadOut{
+    margin-top:80px;
+    width:80%;
+    height:100%;
+}
+#TitleOutSide{
+    margin: 40px 0px 0px 0px;
+}
+@media (max-width: 768px){
+    #TitleOutSide{
+        width:100%;
+        margin:20px auto 20px auto;
+    }}
+#uploadTitle{
+    border-radius:25px;
+    box-shadow: 8px 10px 25px rgba(73, 73, 73, 0.178), inset 8px 10px 25px rgba(139, 139, 139, 0.5),
+    -8px -10px 25px rgb(255, 255, 255), inset -8px -10px 25px rgb(255, 255, 255);
+    position:relative;
+    display:flex;
+    margin:20px auto 0px auto;
+    width:50%;
+    height:45px;
+    border: 3px solid #fff;
+    color:#0a0a13;
+    padding:17px;
+}
+@media (max-width: 768px){
+    #uploadTitle{
+        width:100%;
+        margin:20px auto 20px auto;
+    }}
+@media (min-width: 768px){
+#imgUpload{
+    display:flex;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}}
+@media (max-width: 768px){
+    #imgUpload{
+        display:none;
+    }}
+@media (min-width: 768px){
+#dragDrop{
+    width: 100%;
+    height: 100%;
+    opacity:0;
+    cursor: pointer;
+    position:absolute;
+    border:2px solid black;
+    z-index: 7;
+}}
+@media (min-width: 768px){
+#uploadCard{
+    position:relative;
+    transition:0.2s ease-in-out;
+    width: 350px;
+    height:400px;
+    margin:30px auto;
+    border-radius:25px;
+    border:4px solid rgb(255, 255, 255);
+    box-shadow: 8px 10px 25px rgba(73, 73, 73, 0.4), inset 8px 10px 25px rgba(73, 73, 73, 0.4),
+                -8px -10px 25px rgb(255, 255, 255), inset -8px -10px 25px rgb(255, 255, 255);
+    z-index: 4;
+    overflow:hidden;
+}}
+@media (min-width: 768px){
+#uploadIcon{  
+    display:flex;
+    justify-content:center;  
+    margin-top:45%;
+    margin-left:42%;
+    transition-delay: 3s;
+    font-size:50px;
+    color:rgba(117, 117, 117, 0.5);
+    animation: upload 1.2s linear infinite;
+}}
+@keyframes upload {
+    0%,50%,100%
+    {
+        margin-top:46%;
+    }
+    25%,75%
+    {
+        margin-top:45%;
+    }
+}
+.fa-cloud-upload-alt{
+    filter:drop-shadow( 1.8px 1.3px 1.5px rgba(0, 0, 0, 0.705));
+}
+@media (min-width: 768px){
+#uploadIcon::after{  
+    position:absolute;
+    content:"DROP HERE";
+    font-size:20px;
+    margin:20% ;
+    margin-top:95%;
+    color:rgb(68, 67, 67);
+}}
+@media (max-width: 768px){
+    #uploadIcon{ 
+        display:none
+     }}
+@media (min-width: 768px){
+#uploadIconDone{  
+    display: flex;
+    justify-content: center;
+    margin-top: 45%;
+    margin-left: 40%;
+    transition-delay: 3s;
+    font-size: 74px;
+    color: rgb(0 136 25);
+    animation: uploaded 0.9s linear infinite;
+}}
+@keyframes uploaded {
+    0%,100%
+    {
+        margin-left: 40%;
+        font-size: 74px;
+    }
+    50%
+    {
+        margin-left: 39%;
+        font-size: 80px;
+    }
+}
+@media (max-width: 768px){
+    #uploadIconDone{ 
+        display:none
+    }}
+#FileName{
+    position:relative;
+    cursor: pointer;
+    display:flex;
+    margin:0 auto;
+    width:50%;
+    padding:8px;
+    text-shadow: 1px 1px 2.1px rgb(0, 0, 0, 0.5);
+    border: 3px solid #fff;
+    border-radius:25px;
+    box-shadow:  8px 10px 25px rgba(73, 73, 73, 0.178), inset 8px 10px 25px rgba(139, 139, 139, 0.5),
+    -8px -10px 25px rgb(255, 255, 255), inset -8px -10px 25px rgb(255, 255, 255);
+}
+#FileName h6{
+    margin: auto;
+    color: #0a0a13;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+@media (max-width: 768px){
+    #FileName{
+        width:100%;
+        margin:20px auto 20px auto;
+    }}
+#uploadButton{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+    width: 50%;
+    padding-bottom: 90px;
+}
+#uploadButton input{
+    width:auto;
+    margin:20px auto 20px auto;
+    color:#fff;
+    background:var(--cl);
+    border: 3px solid #fff;
+    border-radius:25px;
+    box-shadow: 3px 2px 7px rgba(0, 0, 0, 0.376), -8px -10px 25px rgb(255, 255, 255);
+}
+@media (max-width: 768px){
+    #uploadButton input{
+        margin:20px auto;
+}   }
+#uploadRecipe{
+    position:relative;
+    display:flex;
+    margin:0 auto;
+    color: var(--cl);
+    width:80%;
+    padding:8px;
+    border: 3px solid #fff;
+    border-radius:25px;
+    box-shadow: 8px 10px 25px rgba(73, 73, 73, 0.178), inset 8px 10px 25px rgba(139, 139, 139, 0.5),
+    -8px -10px 25px rgb(255, 255, 255), inset -8px -10px 25px rgb(255, 255, 255);
+}
+@media (max-width: 768px){
+    #uploadRecipe{
+        width:100%;
+        margin:20px 0px 20px auto;
+}   }
+#uploadRecipe #recipeInput{
+    background: rgba(255, 255, 255, 0);   
+    width: 100%;
+    padding: 10px;
+    border:none;
+    outline: none; 
+    color: var(--cl);
+}
+#uploadRecipe .form-label{
+    text-shadow: 0px 0px 6px rgb(255, 255, 255);
+    margin-top: -1px;
+}
+
+/*-------------------------------------------* Setting Page *-----------------------------------------------*/
+#outlineSettings{
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    width: 100%;
+    height:100%;
+    max-width: 900px;
+    margin: 64px auto 0px auto;
+}
+#settingOptions{
+    width: 100%;
+    height:100%;
+    background: rgb(63, 82, 136);
+    text-transform: capitalize;
+    text-align: center;
+    padding:15px;
+    border-bottom:2px solid rgb(8, 7, 24) ;
+}
+@media (max-width: 590px){
+    #outlineSettings{
+        margin-top: 56px;
+    }
+}
+#settingOptions h5{
+    width: fit-content;
+    cursor: pointer;
+}
+
+#containerEdit{
+    height:auto;
+    width:100%;
+    top:150px;
+    background:rgba(0,0,0,0.5);
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 0;
+}
+#containerEdit::after{
+    content: "";
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width:410px;
+    height: 107%;
+    background:var(--cl);
+    z-index: 1;
+    border-radius: 20px;
+    border: 4px solid var(--login);
+    box-shadow: 0px 15px 15px rgba(10,10,10, 0.2),
+                inset 0px -15px 15px rgb(8, 7, 14, 0.2),
+                0px 15px 15px rgba(0, 0, 0, 0.4),
+                inset 0px 15px 15px rgba(8, 7, 14, 0.4);
+}
+#containerEdit::before{
+    content: "";
+    position:absolute;
+    width:465px;
+    height:117%;
+    background:var(--theam);
+    border-radius: 20px;
+    z-index: 1;
+    border: 10px solid var(--login);
+    box-shadow: 0px 15px 15px rgba(10,10,10, 0.2),
+                inset 0px -15px 15px rgb(8, 7, 14, 0.2),
+                0px 15px 15px rgba(0, 0, 0, 0.4),
+}
+#EditCard {
+    position:relative;
+    width:377px;
+    height:auto;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(51, 51, 51, 0.068);
+    display: flex;
+    z-index: 5;
+    justify-content:center;
+    align-items:center;
+    border-top: 0.5px solid rgba(255,255,255,0.5);
+    border-left: 0.5px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(15px);
+    transition:0.5s;
+}
+#EditCard #EditContent {
+    text-align: center;
+    transition: 0.5s;
+}
+#EditButton{
+    margin-top:6px;
+    margin-bottom: 20px;
+    background:rgba(255,255,255,0.1);
+    box-shadow: 0px 0px 5px var(--theam),inset 0px 0px 10px rgba(0, 0, 0, 0.349);
+    border-radius: 20px;
+}
+#EditProfilePicOut{
+    position: absolute;
+    top: 36px;
+    left: 99.5px;
+    border-radius: 50%;
+    background-color: black;
+    width: 178px;
+    height: 178px;    
+    object-fit: cover;
+    z-index: 1;
+}
+#EditProfilePic{
+    border-radius: 50%;
+    width:100%; 
+    height:100%;
+    object-fit: cover;
+}
+
+/*-------------------------------------------* Pagination Page *-----------------------------------------------*/
+.swiper-pagination{
+    top: 305px;
+    height: 9px;
+}
+.swiper-pagination-bullet-active{
+    background: #fff;
+}
+@media (min-width: 768px) {
+    .swiper-pagination{
+        top: 205px;
+        height: 9px;
+    }
+}
+

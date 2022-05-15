@@ -1,0 +1,120 @@
+:root{
+    --cl:#1b1b33;
+    --login:#fff;
+    --theam:#ffa600;
+}
+
+/*-------------------------------------------* Setting Page *-----------------------------------------------*/
+#outlineSettings{
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    width: 100%;
+    height:100%;
+    max-width: 900px;
+    margin: 64px auto 0px auto;
+}
+#settingOptions{
+    width: 100%;
+    height:100%;
+    background: rgb(63, 82, 136);
+    text-transform: capitalize;
+    text-align: center;
+    padding:15px;
+    border-bottom:2px solid rgb(8, 7, 24) ;
+}
+@media (max-width: 590px){
+    #outlineSettings{
+        margin-top: 56px;
+    }
+}
+#settingOptions h5{
+    margin:auto;
+}
+
+#containerEdit{
+    height:auto;
+    width:100%;
+    top:150px;
+    background:rgba(0,0,0,0.5);
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 0;
+}
+#containerEdit::after{
+    content: "";
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width:410px;
+    height: 107%;
+    background:var(--cl);
+    z-index: 1;
+    border-radius: 20px;
+    border: 4px solid var(--login);
+    box-shadow: 0px 15px 15px rgba(10,10,10, 0.2),
+                inset 0px -15px 15px rgb(8, 7, 14, 0.2),
+                0px 15px 15px rgba(0, 0, 0, 0.4),
+                inset 0px 15px 15px rgba(8, 7, 14, 0.4);
+}
+#containerEdit::before{
+    content: "";
+    position:absolute;
+    width:465px;
+    height:117%;
+    background:var(--theam);
+    border-radius: 20px;
+    z-index: 1;
+    border: 10px solid var(--login);
+    box-shadow: 0px 15px 15px rgba(10,10,10, 0.2),
+                inset 0px -15px 15px rgb(8, 7, 14, 0.2),
+                0px 15px 15px rgba(0, 0, 0, 0.4),
+}
+#EditCard {
+    position:relative;
+    width:377px;
+    height:auto;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(51, 51, 51, 0.068);
+    display: flex;
+    z-index: 5;
+    justify-content:center;
+    align-items:center;
+    border-top: 0.5px solid rgba(255,255,255,0.5);
+    border-left: 0.5px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(15px);
+    transition:0.5s;
+}
+#EditCard #EditContent {
+    text-align: center;
+    transition: 0.5s;
+}
+#EditButton{
+    margin-top:6px;
+    margin-bottom: 20px;
+    background:rgba(255,255,255,0.1);
+    box-shadow: 0px 0px 5px var(--theam),inset 0px 0px 10px rgba(0, 0, 0, 0.349);
+    border-radius: 20px;
+}
+#EditProfilePicOut{
+    position: absolute;
+    top: 36px;
+    left: 99.5px;
+    border-radius: 50%;
+    background-color: black;
+    width: 178px;
+    height: 178px;    
+    object-fit: cover;
+    z-index: 1;
+}
+#EditProfilePic{
+    border-radius: 50%;
+    width:100%; 
+    height:100%;
+    object-fit: cover;
+}
