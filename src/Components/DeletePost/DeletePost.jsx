@@ -2,7 +2,7 @@ import React from 'react';
 import { DeleteForeverRounded } from '@mui/icons-material/';
 import axios from 'axios';
 
-function DeletePost({ URL, recipeId, setMessage, setChange }) {
+function DeletePost({ URL, recipeId, setChange }) {
 
 //-------------------------------* DELETE POST FUNCTION *-------------------------------//
     const Delete = (async (id) => {
