@@ -36,7 +36,6 @@ const SignUpComponent = ({ URL }) => {
 
         e.preventDefault();
         const updatedData = contactForm.current;
-        let response = '';
         try {
             if (file === '' && updatedData.first_name === '' && updatedData.last_name === '' && updatedData.username === '' && updatedData.email === '' && updatedData.address === '' && updatedData.number === '' && updatedData.password === '') {
                 setWorning({ status: 'error', data: { msg: 'Please fill all the details..!!!' } });
@@ -51,7 +50,8 @@ const SignUpComponent = ({ URL }) => {
                 formData.append('address', updatedData.address.value);
                 formData.append('number', updatedData.number.value);
                 formData.append('password', updatedData.password.value);
-                response = await axios.post(`${URL}/register/registeruser`, formData, {
+                
+                let response = await axios.post(`${URL}/register/registeruser`, formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }
