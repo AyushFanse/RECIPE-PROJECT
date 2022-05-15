@@ -5,7 +5,7 @@ function Transition(props) {
   return <Slide {...props} direction="left" />;
 }
 
-const Message = ({ message, security })=>{
+const Message = ({ message, security, close, loading })=>{
   const [open, setOpen] = React.useState(true);
 
   const handleClose = ( reason ) => {
@@ -14,6 +14,8 @@ const Message = ({ message, security })=>{
     } 
 
     setOpen(false);
+    loading(false);
+    close('');
   };
 
   setTimeout(()=>{setOpen(true);})

@@ -1,15 +1,16 @@
 import React, { useState, useRef } from 'react';
 import axios from 'axios';
-import { IconButton, Alert, Stack, Button, Grid, FormControl, InputLabel, Input, CircularProgress, InputAdornment, Box } from '@mui/material';
+import { IconButton, Button, Grid, FormControl, InputLabel, Input, CircularProgress, InputAdornment, Box } from '@mui/material';
 import { Visibility, VisibilityOff, LockTwoTone, AccountCircle } from '@mui/icons-material';
 import { useHistory } from 'react-router-dom';
+import Message from '../../Components/AlertPopup/Popup';
 import './auth.css';
 
 const LoginComponent = ({ URL }) => {
 
     //-------------------------------* USE-STATE METHODS *-------------------------------//
     const [showPassword, setShowPassword] = useState('');
-    const [Worning, setWorning] = useState('');
+    const [worning, setWorning] = useState('');
     const [loading, setLoading] = useState(false);
     const history = useHistory();
     const contactForm = useRef();
@@ -30,8 +31,8 @@ const LoginComponent = ({ URL }) => {
         e.preventDefault();
         const data = contactForm.current;
         try {
-            setLoading(true)
             if (data.email.value && data.password.value) {
+                setLoading(true)
                 let response = await axios.post(`${URL}/register/login`, {
                     email: data.email.value,
                     password: data.password.value
@@ -43,8 +44,9 @@ const LoginComponent = ({ URL }) => {
                 }
 
             } else {
+                setLoading(false)
                 setWorning({ status: 'error', msg: 'Please fill all the details..!!!' })
-                setTimeout(() => { e.target.reset() }, 2000);
+                setTimeout(() => { data.password.value="" }, 2000);
             }
         } catch (err) {
 
@@ -62,20 +64,12 @@ const LoginComponent = ({ URL }) => {
 
     return (
         <>
+            {worning ? <Message message={worning.msg} security={worning.status} close={setWorning} loading={setLoading} /> : null}
             <Box id="container" sx={{ display: 'flex', justifyContent: 'center', mt: 10 }}>
                 <h1 style={{ textAlign: 'center' }}>Login</h1>
                 <Grid id="card">
                     <Grid id="content">
                         <h2 style={{ textAlign: 'center' }}><LockTwoTone id='loginIcon' />Login</h2>
-                        {
-                            Worning.status === 'error'
-                                ?
-                                <Stack sx={{ width: '100%' }} spacing={2}>
-                                    <Alert severity="error">{Worning.msg}</Alert>
-                                </Stack>
-                                :
-                                null
-                        }
                         <br />
                         <form ref={contactForm} onSubmit={(e) => handleSubmit(e)}>
                             <Grid>

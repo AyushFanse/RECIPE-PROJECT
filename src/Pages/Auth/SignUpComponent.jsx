@@ -113,7 +113,7 @@ const SignUpComponent = ({ URL }) => {
 
     return (
         <>
-            {worning ? <Message message={worning.msg} security={worning.status} /> : null}
+            {worning ? <Message message={worning.msg} security={worning.status} close={setWorning} loading={setLoading} /> : null}
             <IconButton onClick={() => { history.goBack() }} edge="start" aria-label="menu" sx={{ ml: 1, mt: 1, mb: -1, color: "#1b1b33" }}>
                 <KeyboardBackspace />
             </IconButton>

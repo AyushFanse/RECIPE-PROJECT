@@ -5,21 +5,19 @@ import axios from 'axios';
 function DeletePost({ URL, recipeId, setMessage, setChange }) {
 
 //-------------------------------* DELETE POST FUNCTION *-------------------------------//
-const Delete = (async (id)=>{
-    
-    if(window.confirm('Are you sure to delete this record?')){
-        setChange(true)
-        
-        await axios.delete(`${URL}/upload/multimedia/delete/${id}`)
+    const Delete = (async (id) => {
 
-        setTimeout(()=>setMessage('Your post has been deleted Successfully'),1000);
-        setTimeout(()=>setMessage(''),5000);
+        if (window.confirm('Are you sure to delete this record?')) {
+            setChange(true)
+
+            await axios.delete(`${URL}/upload/multimedia/delete/${id}`)
+
         }
-})
+    })
 
     return (
-        <>            
-            <li title="Delete" id="items" onClick={()=>{Delete(recipeId)}}><DeleteForeverRounded id="error"/></li>
+        <>
+            <li title="Delete" id="items" onClick={() => { Delete(recipeId) }}><DeleteForeverRounded id="error" /></li>
         </>
     );
 }
