@@ -50,7 +50,7 @@ const SignUpComponent = ({ URL }) => {
                 formData.append('address', updatedData.address.value);
                 formData.append('number', updatedData.number.value);
                 formData.append('password', updatedData.password.value);
-                
+
                 let response = await axios.post(`${URL}/register/registeruser`, formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data'
