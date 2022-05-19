@@ -38,9 +38,13 @@ const LoginComponent = ({ URL }) => {
                     password: data.password.value
                 })
 
-                if (response.data.status === 'success') {
+                if (response.status === 200) {
                     localStorage.setItem('token', response.data.userToken);
-                    history.push('/home');
+                    history.replace('/home');
+                }
+
+                if (response.status === 400) {
+                    setWorning({ status: 'error', msg: response.data.msg })
                 }
 
             } else {

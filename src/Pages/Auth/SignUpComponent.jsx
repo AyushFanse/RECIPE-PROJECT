@@ -57,7 +57,7 @@ const SignUpComponent = ({ URL }) => {
                     }
                 })
 
-                if (response.status === 200) {
+                if (response.status === 201) {
                     history.push('/');
                     alert("You have successfully created your account...");
                 }
