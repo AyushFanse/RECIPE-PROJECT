@@ -19,7 +19,7 @@ const HomeComponent = ({ URL }) => {
   const localToken = localStorage.getItem('token');
   const decodedToken = jwt.decode(localToken);
   const history = useHistory();
-  const FatchRef = useRef();
+  const FetchRef = useRef();
 
   if (change) {
     setTimeout(() => { setChange(false) }, 800)
@@ -37,13 +37,13 @@ const HomeComponent = ({ URL }) => {
     }
   }, [])
 
-  //-------------------------------* FATCHING DATA FUNCTION *-------------------------------//
+  //-------------------------------* FETCHING DATA FUNCTION *-------------------------------//
   useEffect(() => {
-    FatchRef.current();
+    FetchRef.current();
   }, [change])
 
 
-  let Fatch = (async () => {
+  let Fetch = (async () => {
 
     let responseUsers = await axios.get(`${URL}/users/getuser/${decodedToken.user._id}`,
       {
@@ -58,7 +58,7 @@ const HomeComponent = ({ URL }) => {
     setRecipes(responsePosts.data.sort((a, b) => { return cal(a.createdAt) > cal(b.createdAt) ? 1 : -1 }));
   })
 
-  FatchRef.current = Fatch;
+  FetchRef.current = Fetch;
 
   const cal = (date) => {
     let DateNow = new Date(Date.now())
@@ -82,7 +82,7 @@ const HomeComponent = ({ URL }) => {
             <PostCard key={recipe._id} recipe={recipe} URL={URL} setMessage={setMessage} setChange={setChange} user={user} />
           ))}
         </div>
-      </Grid>
+      </Grid>           
     </>
   )
 }

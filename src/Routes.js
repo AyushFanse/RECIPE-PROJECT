@@ -11,7 +11,7 @@ import Upload from './Pages/Upload/FileUpload';
 import Comment from './Components/Comment/Comment';
 import Error from './Pages/Error/Error.jsx';
 
-const URL ='https://recipe-cms-capstone-project.herokuapp.com';
+const URL ='https://recipes-webapplication.onrender.com';
 
 function RouteComponent(){
     return(
